@@ -1,3 +1,29 @@
+//Function for Celsius to fahrenheit conversion.
+function tempConverter(temp, unit) {
+    if (unit === "celsius") {
+        let fahrenheitOutput = (temp * (9/5)) + 32
+        let kelvin = (fahrenheitOutput - 32) * 5/9 + 273.15
+        console.log(`Today's weather is ${fahrenheitOutput}°F, ${temp}°C 
+& Kelvin is ${kelvin}K`);
+    } 
+    else if(unit=== "fahrenheit"){
+        let celsiusOutput = (temp - 32) * 5/9
+        let kelvin = celsiusOutput + 273.15
+        console.log(`Today's weather is ${celsiusOutput}°C, ${temp}°F
+& Kelvin is ${kelvin}K`);
+
+    }
+ 
+
+    else {
+        console.log('invalid Number');
+    }
+}
+
+tempConverter(86, "fahrenheit")
+
+
+
 //Problem 1: Write a function to calculate the area of a triangle.
 function triangle(base, height) {
     return((base * height) / 2)
